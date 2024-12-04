@@ -48,8 +48,8 @@
 #include "ble_handler.h"
 
 // WiFi credentials
-const char* ssid = "Flybox5B4F24G";
-const char* password = "2jxg7fijN7vd";
+const char* ssid = "XXXXXXX";
+const char* password = "XXXXXX";
 
 // Constants for timing
 const unsigned long SENSOR_READ_INTERVAL = 3000;  // Read sensors every 3 seconds
