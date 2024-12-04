@@ -12,6 +12,7 @@ $ python3 -m http.server 3000
 
 And then open http://localhost:3000
 
+![Alt screen](jauges.png)
 
 
 
