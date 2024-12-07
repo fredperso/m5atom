@@ -1,0 +1,15 @@
+{
+  "name": "environmental-monitor",
+  "version": "1.0.0",
+  "description": "Environmental Monitoring PWA with BLE support",
+  "scripts": {
+    "start": "serve .",
+    "build": "mkdir -p dist && cp -r index.html offline.html manifest.json sw.js ble.js icons dist/ && workbox generateSW workbox-config.js"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "workbox-cli": "^7.0.0"
+  }
+}

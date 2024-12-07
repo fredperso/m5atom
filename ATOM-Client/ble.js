@@ -57,17 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function drawGauges() {
         temperatureData = google.visualization.arrayToDataTable([
             ['Label', 'Value'],
-            ['Temp. (°C)', 20]
+            ['Temp. (°C)', 0]
         ]);
 
         humidityData = google.visualization.arrayToDataTable([
             ['Label', 'Value'],
-            ['Humidity (%)', 50]
+            ['Humidity (%)', 0]
         ]);
 
         pressureData = google.visualization.arrayToDataTable([
             ['Label', 'Value'],
-            ['Pressure (hPa)', 1013]
+            ['Pressure (hPa)', 0]
         ]);
 
         temperatureGauge = new google.visualization.Gauge(document.getElementById('temperatureGauge'));
@@ -199,9 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateConnectionStatus('disconnected');
         
         // Reset values and gauges
-        temperatureData.setValue(0, 1, 20);
-        humidityData.setValue(0, 1, 50);
-        pressureData.setValue(0, 1, 1013);
+        temperatureData.setValue(0, 1, 0);
+        humidityData.setValue(0, 1, 0);
+        pressureData.setValue(0, 1, 0);
         
         temperatureGauge.draw(temperatureData, temperatureOptions);
         humidityGauge.draw(humidityData, humidityOptions);
@@ -224,7 +224,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check if Web Bluetooth is supported
     if (!navigator.bluetooth) {
-        alert('Web Bluetooth is not supported in this browser. Please use a compatible browser like Chrome.');
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const message = isLocalhost ?
+            'Web Bluetooth is not enabled. To use Web Bluetooth on localhost:\n\n' +
+            '1. Open Chrome\n' +
+            '2. Go to chrome://flags/#enable-web-bluetooth\n' +
+            '3. Enable "Web Bluetooth"\n' +
+            '4. Click "Relaunch" at the bottom\n' +
+            '5. Reload this page' :
+            'Web Bluetooth is not supported in this browser. Please use Chrome or Edge on desktop, or Chrome for Android.';
+        
+        alert(message);
         scanButton.disabled = true;
         connectButton.disabled = true;
         disconnectButton.disabled = true;
