@@ -23,11 +23,21 @@ A Progressive Web App for environmental monitoring using Web Bluetooth.
    ```bash
    npm install
    ```
-4. Start the local server:
+4. Start the server using one of these options:
+
+   Option A - Using npm (recommended):
    ```bash
    npm start
    ```
+
+   Option B - Using Python:
+   ```bash
+   python3 -m http.server 3000
+   ```
+
 5. Open Chrome and visit: `http://localhost:3000`
+
+Note: If using Python server, you'll need Python 3 installed on your system.
 
 ## Web Bluetooth Setup
 
