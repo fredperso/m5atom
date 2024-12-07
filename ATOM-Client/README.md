@@ -50,6 +50,38 @@ Note: If using Python server, you'll need Python 3 installed on your system.
 
 ### Android
 - Web Bluetooth is supported by default in Chrome for Android
+- Requirements:
+  1. Chrome version 56 or later
+  2. Android 6.0 (Marshmallow) or later
+  3. Bluetooth enabled in phone settings
+  4. Location services enabled
+  5. Location permission granted to Chrome
+  6. Secure context (HTTPS or localhost)
+
+Testing on Android:
+
+Option 1 - Using ADB (Recommended):
+1. Connect your Android device via USB
+2. Enable USB debugging on your device
+3. Install ADB on your computer
+4. Run this command:
+   ```bash
+   adb reverse tcp:3000 tcp:3000
+   ```
+5. Access the app at: `http://localhost:3000`
+
+Option 2 - Using HTTPS:
+1. Deploy the app to a secure hosting service
+2. Access via HTTPS URL
+
+Troubleshooting Android:
+1. Go to Android Settings > Apps > Chrome > Permissions
+2. Enable both "Location" and "Bluetooth" permissions
+3. Enable Location Services in Android Quick Settings
+4. Make sure Bluetooth is turned on
+5. Ensure you're using either:
+   - `localhost` (with adb reverse)
+   - HTTPS connection
 
 ### iOS
 - Due to iOS limitations, Web Bluetooth is not supported on iOS devices
