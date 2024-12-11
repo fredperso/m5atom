@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:weightSum="3">
+
+    <!-- Temperature Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/temperatureLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Temperature (Celsus)" />
+
+        <com.github.anastr.speedviewlib.DeluxeSpeedView
+            android:id="@+id/temperatureGauge"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:sv_indicator="NormalSmallIndicator"
+            app:sv_indicatorColor="#2196F3"
+            app:sv_indicatorWidth="12dp"
+            app:sv_maxSpeed="40"
+            app:sv_minSpeed="-10"
+            app:sv_speedometerBackColor="#1A2196F3"
+            app:sv_speedometerColor="#2196F3"
+            app:sv_withTremble="false"
+            app:sv_unit=" °C"
+            app:sv_speedTextColor="#2196F3"
+            app:sv_unitTextColor="#2196F3"
+            app:sv_textSize="0sp" />
+
+
+    </LinearLayout>
+
+    <!-- Humidity Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/humidityLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Humidity (%)" />
+
+        <com.github.anastr.speedviewlib.DeluxeSpeedView
+            android:id="@+id/humidityGauge"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:sv_indicator="NormalSmallIndicator"
+            app:sv_indicatorColor="#4CAF50"
+            app:sv_indicatorWidth="12dp"
+            app:sv_maxSpeed="100"
+            app:sv_minSpeed="0"
+            app:sv_speedometerBackColor="#1A4CAF50"
+            app:sv_speedometerColor="#4CAF50"
+            app:sv_withTremble="false"
+            app:sv_unit=" %"
+            app:sv_speedTextColor="#4CAF50"
+            app:sv_unitTextColor="#4CAF50"
+            app:sv_textSize="0sp" />
+
+
+    </LinearLayout>
+
+    <!-- Pressure Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/pressureLabelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Pressure (Hpa)" />
+
+        <com.github.anastr.speedviewlib.DeluxeSpeedView
+            android:id="@+id/pressureGauge"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:sv_indicator="NormalSmallIndicator"
+            app:sv_indicatorColor="#FF9800"
+            app:sv_indicatorWidth="12dp"
+            app:sv_maxSpeed="1100"
+            app:sv_minSpeed="960"
+            app:sv_speedometerBackColor="#1AFF9800"
+            app:sv_speedometerColor="#FF9800"
+            app:sv_withTremble="false"
+            app:sv_unit=" hPa"
+            app:sv_speedTextColor="#FF9800"
+            app:sv_unitTextColor="#FF9800"
+            app:sv_textSize="0sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
