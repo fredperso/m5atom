@@ -1,6 +1,7 @@
 # m5atom
 M5Atom esp32 with ENV III sensors
-The code is split between the server (Atom-Opti-monitor-ENVIII folder) and the bluetooth client running in a Web browser (Atom Client folder).
+The code is split between the server (Atom-Opti-monitor-ENVIII folder) and 2 types of clients :
+A Web client running in a Web browser (Atom Client folder) or an Android device (Android folder).
 The server connect to your own Wifi network with the ssid/password you define in the main.cpp file :
 / WiFi credentials
 const char* ssid = "XXXXX";
