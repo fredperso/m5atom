@@ -17,6 +17,22 @@ A Progressive Web App for environmental monitoring using Web Bluetooth.
    - Select "Add to Home Screen"
 
 ### 2. Local Installation
+
+#### Quick Start (Recommended)
+1. Download the latest release from the releases page
+2. Extract the ZIP file
+3. Launch the application:
+   - On Windows: Double-click `start.bat`
+   - On macOS: Double-click `start.command`
+
+The launcher will automatically:
+- Check if Node.js is installed
+- Install required dependencies
+- Start the local server
+- Open the application in your default browser
+
+#### Manual Installation
+If you prefer to run the server manually:
 1. Download the latest release from the releases page
 2. Extract the ZIP file
 3. Install dependencies:
